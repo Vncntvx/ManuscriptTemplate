@@ -233,7 +233,7 @@
 %%   - \C : 复数集 ℂ
 %%
 %% 概率统计:
-%%   - \E    : 期望 𝔼
+%%   - \E    : 期望 ��
 %%   - \Var  : 方差
 %%   - \Cov  : 协方差
 %%   - \Prob : 概率 ℙ
@@ -502,17 +502,27 @@
 %% ----------------------------------------------------------------------------
 %% 参考文献
 %% ----------------------------------------------------------------------------
-%% natbib 宏包提供灵活的引用格式
+%% biblatex 宏包提供现代化的参考文献管理
 %% 选项:
-%%   - numbers      : 数字引用 [1,2,3]
-%%   - sort&compress: 排序并压缩 [1-3]
+%%   - backend=biber   : 使用 biber 后端（推荐）
+%%   - style=numeric   : 数字引用样式 [1,2,3]
+%%   - sorting=none    : 按引用顺序排序
+%%   - sortcites=true  : 同一引用点内排序
+%%   - maxnames=3      : 最多显示 3 个作者
+%%   - minnames=1      : 超过时显示 "et al."
+%%
+%% 编译方式: xelatex -> biber -> xelatex -> xelatex
 %%
 %% 常用引用命令:
-%%   - \cite{key}  : [1]
-%%   - \citep{key} : (Author, Year)
-%%   - \citet{key} : Author (Year)
+%%   - \cite{key}      : [1]
+%%   - \parencite{key} : [1]
+%%   - \textcite{key}  : Author [1]
+%%   - \footcite{key}  : 脚注引用
+%%
+%% 打印参考文献:
+%%   - \printbibliography : 打印参考文献列表
 %% ----------------------------------------------------------------------------
-\RequirePackage[numbers, sort&compress]{natbib}
+\RequirePackage[backend=biber, style=numeric, sorting=none, sortcites=true, maxnames=3, minnames=1]{biblatex}
 
 %% ----------------------------------------------------------------------------
 %% 单位排版

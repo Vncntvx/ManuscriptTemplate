@@ -4,22 +4,46 @@
 *.out
 *.toc
 
-# 参考文献相关
+# 参考文献相关 (BibTeX/BibLaTeX/Biber)
 *.bbl
 *.blg
+*.bcf
+*.run.xml
 
 # 索引和词汇表
 *.idx
 *.ind
+*.ilg
 *.glo
 *.gls
+*.glg
 *.lot
 *.lof
+*.ist
+*.nlo
+*.nls
+*.acr
+*.acn
+*.alg
+
+# Beamer 幻灯片相关
+*.nav
+*.snm
+*.vrb
 
 # SyncTeX 和编译缓存
 *.synctex.gz
+*.synctex(busy)
 *.fdb_latexmk
 *.fls
+
+# 其他辅助文件
+*.thm
+*.qst
+*.xdy
+*.dvi
+*.ps
+*.eps-converted-to-*
 
 # 临时文件
 *.tmp

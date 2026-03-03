@@ -47,6 +47,17 @@
 }
 
 %% ----------------------------------------------------------------------------
+%% References Configuration
+%% ----------------------------------------------------------------------------
+%% BibLaTeX configuration (using biber backend)
+%% Compilation: xelatex -> biber -> xelatex -> xelatex
+%%
+%% \addbibresource{filename.bib} loads the bibliography source file
+%%   - Include the full filename with .bib extension
+%% ----------------------------------------------------------------------------
+\addbibresource{references.bib}
+
+%% ----------------------------------------------------------------------------
 %% Document Body Begins
 %% ----------------------------------------------------------------------------
 \begin{document}
@@ -134,7 +145,7 @@ methodology, and results of your paper. Keep it concise and informative, typical
 \label{sec:intro}
 
 Write your introduction here. Provide background context, state the research problem, 
-and outline the paper structure \cite{example2023paper}.
+and outline the paper structure \cite{zurekProbabilitiesEntanglementBorns2005}.
 
 The main contributions of this paper include:
 %% ----------------------------------------------------------------------------
@@ -398,20 +409,14 @@ The experimental results demonstrate that the model performance remains relative
 %% ----------------------------------------------------------------------------
 %% References
 %% ----------------------------------------------------------------------------
-%% \bibliographystyle{style} sets the bibliography style
-%% Common styles (with natbib):
-%%   - plainnat   : numbered by citation order, author-year format
-%%   - abbrvnat   : abbreviated author names
-%%   - unsrtnat   : unsorted, by appearance order
+%% \printbibliography prints the bibliography list
 %%
-%% \bibliography{filename} loads the .bib file
-%% Do not include file extension
 %% Citation Commands:
-%%   - \cite{key}: Basic citation [1]
-%%   - \citep{key}: Parenthetical citation (Author, Year) - requires natbib
-%%   - \citet{key}: Textual citation Author (Year) - requires natbib
+%%   - \cite{key}      : Basic citation [1]
+%%   - \parencite{key} : Parenthetical citation [1]
+%%   - \textcite{key}  : Textual citation Author [1]
+%%   - \footcite{key}  : Footnote citation
 %% ----------------------------------------------------------------------------
-\bibliographystyle{plainnat}
-\bibliography{references}
+\printbibliography
 
 \end{document}

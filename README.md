@@ -1,4 +1,4 @@
-# latex-manuscript-template
+# ManuscriptTemplate
 
 XeLaTeX / Typst 学术论文模板（初稿），支持中英混排
 
